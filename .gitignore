@@ -22,6 +22,8 @@ Thumbs.db
 # Java
 *.class
 build/
+.gradle
+cli.jar
 
 # packages 
 *.war
