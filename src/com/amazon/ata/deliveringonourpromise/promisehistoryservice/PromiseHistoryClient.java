@@ -9,7 +9,7 @@ import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
  */
 public class PromiseHistoryClient {
 
-    private GetPromiseHistoryByOrderIdActivity getPromiseHistoryByOrderIdActivity;
+    private final GetPromiseHistoryByOrderIdActivity getPromiseHistoryByOrderIdActivity;
 
     /**
      * Constructs a PromiseHistoryClient that will provide access the activity/ies needed
@@ -30,7 +30,7 @@ public class PromiseHistoryClient {
      *
      * @param orderId The order ID to retrieve the history for.
      * @return PromiseHistory for the order; may be empty if order not found
-     *         or if no history is found.
+     * or if no history is found.
      */
     public PromiseHistory getPromiseHistoryByOrderId(String orderId) {
         return getPromiseHistoryByOrderIdActivity.getPromiseHistoryByOrderId(orderId);

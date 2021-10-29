@@ -1,17 +1,12 @@
 package com.amazon.ata.test.reflect;
 
 import com.amazon.ata.test.helper.AtaTestHelper;
-
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import org.reflections.ReflectionUtils;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 

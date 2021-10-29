@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * Represents an item in a customer's order.
- *
+ * <p>
  * Construct an OrderItem via the {@code OrderItem.builder()...build();} pattern,
  * for example:
  *
@@ -17,7 +17,7 @@ import java.util.Objects;
  *                             ...
  *                             .build();
  * }</pre>
- *
+ * <p>
  * Explanation of fields:
  * * customerOrderItemId: unique identifier for the order-item
  * * orderId: the identifier for the order that this order-item belongs to
@@ -25,7 +25,6 @@ import java.util.Objects;
  * * merchantId: the identifier of the merchant selling the item to customer
  * * quantity: how many of the item this customer ordered in this order
  * * title: the customer-facing name of this item/product
- *
  */
 public class OrderItem {
     private String customerOrderItemId;
@@ -38,7 +37,8 @@ public class OrderItem {
     private int confidence;
 
     // for Builder's eyes only.
-    private OrderItem() { }
+    private OrderItem() {
+    }
 
     /**
      * Returns a builder suitable for constructing an OrderItem.
@@ -91,31 +91,31 @@ public class OrderItem {
         }
         OrderItem orderItem = (OrderItem) o;
         return quantity == orderItem.getQuantity() &&
-               isConfidenceTracked == orderItem.isConfidenceTracked() &&
-               confidence == orderItem.getConfidence() &&
-               customerOrderItemId.equals(orderItem.getCustomerOrderItemId()) &&
-               orderId.equals(orderItem.getOrderId()) &&
-               Objects.equals(asin, orderItem.getAsin()) &&
-               Objects.equals(merchantId, orderItem.getMerchantId()) &&
-               Objects.equals(title, orderItem.getTitle());
+                isConfidenceTracked == orderItem.isConfidenceTracked() &&
+                confidence == orderItem.getConfidence() &&
+                customerOrderItemId.equals(orderItem.getCustomerOrderItemId()) &&
+                orderId.equals(orderItem.getOrderId()) &&
+                Objects.equals(asin, orderItem.getAsin()) &&
+                Objects.equals(merchantId, orderItem.getMerchantId()) &&
+                Objects.equals(title, orderItem.getTitle());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(customerOrderItemId, orderId, asin, merchantId,
-                            quantity, title, isConfidenceTracked, confidence);
+                quantity, title, isConfidenceTracked, confidence);
     }
 
     @Override
     public String toString() {
         return "OrderItem{" +
-               "customerOrderItemId='" + customerOrderItemId + '\'' +
-               ", orderId='" + orderId + '\'' +
-               ", asin='" + asin + '\'' +
-               ", merchantId='" + merchantId + '\'' +
-               ", quantity=" + quantity +
-               ", title='" + title + '\'' +
-               '}';
+                "customerOrderItemId='" + customerOrderItemId + '\'' +
+                ", orderId='" + orderId + '\'' +
+                ", asin='" + asin + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", quantity=" + quantity +
+                ", title='" + title + '\'' +
+                '}';
     }
 
     /**

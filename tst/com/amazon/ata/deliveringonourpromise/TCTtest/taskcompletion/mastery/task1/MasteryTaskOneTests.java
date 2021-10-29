@@ -4,15 +4,12 @@ import com.amazon.ata.deliveringonourpromise.App;
 import com.amazon.ata.deliveringonourpromise.promisehistoryservice.PromiseHistoryClient;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
 import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static org.testng.Assert.assertNull;
-import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
+import static org.testng.Assert.*;
 
 public class MasteryTaskOneTests {
     private PromiseHistoryClient client;
@@ -35,6 +32,7 @@ public class MasteryTaskOneTests {
             promiseHistory = client.getPromiseHistoryByOrderId(nonExistentOrderId);
         } catch (Exception e) {
             fail("Expected Missed Promise CLI to not throw an exception!");
+
         }
 
         //THEN

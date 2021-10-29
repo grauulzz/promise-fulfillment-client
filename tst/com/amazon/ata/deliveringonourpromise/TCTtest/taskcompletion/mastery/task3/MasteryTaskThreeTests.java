@@ -2,7 +2,6 @@ package com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.tas
 
 import com.amazon.ata.deliveringonourpromise.types.Order;
 import com.amazon.ata.deliveringonourpromise.types.OrderItem;
-
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Field;
@@ -11,10 +10,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class MasteryTaskThreeTests {
 

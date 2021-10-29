@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * Represents a customer order.
- *
+ * <p>
  * Construct an Order via the {@code Order.builder()...build();} pattern,
  * for example:
  *
@@ -20,7 +20,7 @@ import java.util.List;
  *                      .withCondition(condition)
  *                      .build();
  * }</pre>
- *
+ * <p>
  * Explanation of fields:
  * * orderId: the unique identifier for this order
  * * customerId: the identifier for the customer who placed the order
@@ -31,18 +31,20 @@ import java.util.List;
  * * orderDate: the timestamp of when the order was placed
  */
 public class Order {
-    public String orderId;
-    public String customerId;
-    public String marketplaceId;
-    public OrderCondition condition;
-    public List<OrderItem> customerOrderItemList = new ArrayList<>();
-    public String shipOption;
-    public ZonedDateTime orderDate;
+    private String orderId;
+    private String customerId;
+    private String marketplaceId;
+    private OrderCondition condition;
+    private List<OrderItem> customerOrderItemList = new ArrayList<>();
+    private String shipOption;
+    private ZonedDateTime orderDate;
 
-    private Order() { }
+    private Order() {
+    }
 
     /**
      * Returns a new Order.Builder object for constructing an Order.
+     *
      * @return new builder ready for constructing an Order
      */
     public static Builder builder() {
@@ -85,14 +87,14 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-               "orderId='" + orderId + '\'' +
-               ", customerId='" + customerId + '\'' +
-               ", marketplaceId='" + marketplaceId + '\'' +
-               ", condition=" + condition +
-               ", customerOrderItemList=" + customerOrderItemList +
-               ", shipOption='" + shipOption + '\'' +
-               ", orderDate=" + orderDate +
-               '}';
+                "orderId='" + orderId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", marketplaceId='" + marketplaceId + '\'' +
+                ", condition=" + condition +
+                ", customerOrderItemList=" + customerOrderItemList +
+                ", shipOption='" + shipOption + '\'' +
+                ", orderDate=" + orderDate +
+                '}';
     }
 
 
@@ -137,7 +139,7 @@ public class Order {
          * @return updated Builder
          */
         public Builder withCustomerOrderItemList(List<OrderItem> customerOrderItemList) {
-            this.customerOrderItemList = customerOrderItemList;
+            this.customerOrderItemList = List.copyOf(customerOrderItemList);
             return this;
         }
 

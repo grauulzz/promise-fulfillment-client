@@ -1,7 +1,6 @@
 package com.amazon.ata.test.reflect;
 
 import com.amazon.ata.test.helper.AtaTestHelper;
-
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
 

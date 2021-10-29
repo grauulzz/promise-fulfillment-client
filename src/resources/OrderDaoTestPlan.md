@@ -29,6 +29,9 @@ We've filled out a happy path test for the `OrderDao#get` method.
 Copy and modify it to complete your test plan.
 
 ### get_forKnownOrderId_returnsOrder
+
+get_forKnownOrderId_returnsOrder
+
 Happy case, verifying that the OrderDao can return an order.
 
 #### Given
