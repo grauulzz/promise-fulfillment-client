@@ -1,27 +1,21 @@
 package com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5;
 
+import com.amazon.ata.deliveringonourpromise.TCTtest.wrapper.PromiseAsinComparatorWrapper;
 import com.amazon.ata.deliveringonourpromise.activity.GetPromiseHistoryByOrderIdActivity;
 import com.amazon.ata.deliveringonourpromise.dao.OrderDao;
 import com.amazon.ata.deliveringonourpromise.dao.PromiseDao;
-import com.amazon.ata.deliveringonourpromise.TCTtest.wrapper.PromiseAsinComparatorWrapper;
 import com.amazon.ata.deliveringonourpromise.types.Order;
 import com.amazon.ata.deliveringonourpromise.types.OrderItem;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
 import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
-
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Comparators;
 import com.google.common.collect.Multimap;
-
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.amazon.ata.test.assertions.IntrospectionAssertions.assertDoesNotImplementInterface;
@@ -176,7 +170,7 @@ public class MasteryTaskFiveTests {
         // promises are in ascending ASIN order.
         assertTrue(Comparators.isInOrder(
             returnedPromises,
-            (x, y) -> x.getAsin().compareTo(y.getAsin()))
+                Comparator.comparing(Promise::getAsin))
         );
     }
 

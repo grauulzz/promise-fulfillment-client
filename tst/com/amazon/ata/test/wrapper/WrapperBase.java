@@ -2,7 +2,6 @@ package com.amazon.ata.test.wrapper;
 
 import com.amazon.ata.test.reflect.ConstructorQuery;
 import com.amazon.ata.test.reflect.MethodQuery;
-
 import com.google.common.collect.Lists;
 
 import java.lang.reflect.Constructor;

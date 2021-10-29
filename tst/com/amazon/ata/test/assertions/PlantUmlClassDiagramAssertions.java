@@ -1,15 +1,12 @@
 package com.amazon.ata.test.assertions;
 
 import com.amazon.ata.test.helper.PlantUmlClassDiagramHelper;
-
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.amazon.ata.test.assertions.AtaAssertions.assertContains;
-import static com.amazon.ata.test.assertions.AtaAssertions.assertMatchesMultiLine;
-import static com.amazon.ata.test.assertions.AtaAssertions.assertMatchesSingleLine;
+import static com.amazon.ata.test.assertions.AtaAssertions.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

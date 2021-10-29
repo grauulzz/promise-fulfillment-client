@@ -4,7 +4,6 @@ import com.amazon.ata.deliveringonourpromise.types.Promise;
 import com.amazon.ata.test.reflect.ClassQuery;
 import com.amazon.ata.test.reflect.MethodQuery;
 import com.amazon.ata.test.wrapper.WrapperBase;
-
 import com.google.common.collect.ImmutableList;
 
 import java.lang.reflect.Constructor;

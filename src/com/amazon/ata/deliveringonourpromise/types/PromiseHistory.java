@@ -1,5 +1,7 @@
 package com.amazon.ata.deliveringonourpromise.types;
 
+import com.amazon.ata.deliveringonourpromise.comparators.PromiseAsinComparator;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +10,8 @@ import java.util.List;
  * order does not exist it will be null, and the PromiseHistory will contain no promises.
  */
 public class PromiseHistory {
-    private Order order;
-    private List<Promise> promises = new ArrayList<>();
+    private final Order order;
+    private final List<Promise> promises = new ArrayList<>();
 
     /**
      * Constructs a new promise history with the given order. A null order value is allowed here.
@@ -47,6 +49,8 @@ public class PromiseHistory {
      * @return the promises
      */
     public List<Promise> getPromises() {
-        return new ArrayList<>(promises);
+        List<Promise> promiseArrayList = new ArrayList<>(promises);
+        promiseArrayList.sort(new PromiseAsinComparator());
+        return promiseArrayList;
     }
 }

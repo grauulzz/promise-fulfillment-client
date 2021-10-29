@@ -3,7 +3,6 @@ package com.amazon.ata.deliveringonourpromise.ordermanipulationauthority;
 import com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthority;
 import com.amazon.ata.ordermanipulationauthority.OrderResult;
 import com.amazon.ata.ordermanipulationauthority.OrderResultItem;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

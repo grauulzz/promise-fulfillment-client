@@ -1,20 +1,11 @@
 package com.amazon.ata.deliveringonourpromise;
 
-import com.amazon.ata.deliveringonourpromise.data.OrderData;
-import com.amazon.ata.deliveringonourpromise.data.OrderDatastore;
-import com.amazon.ata.deliveringonourpromise.data.OrderFixture;
-import com.amazon.ata.deliveringonourpromise.data.OrderItemData;
-import com.amazon.ata.deliveringonourpromise.data.OrderShipmentData;
+import com.amazon.ata.deliveringonourpromise.data.*;
 import com.amazon.ata.input.console.ATAUserHandler;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -83,6 +74,7 @@ public class DeliveringOnOurPromiseIntegrationTests {
                 .withExpectedDeliveryDate("DELIVERY DATE")
                 .withExpectedProvidedBy("PROVIDED BY")
                 .withExpectedConfidence("CONFIDENCE")
+                .withNullConfidence("CONFIDENCE")
                 .getFields());
 
         // WHEN
@@ -249,6 +241,12 @@ public class DeliveringOnOurPromiseIntegrationTests {
         }
 
         public ExpectedPromiseRow withExpectedConfidence(final String expected) {
+            this.expectedConfidence = Optional.of(expected);
+            return this;
+        }
+
+        public ExpectedPromiseRow withNullConfidence(final String expected) {
+            expected.equals(null);
             this.expectedConfidence = Optional.of(expected);
             return this;
         }

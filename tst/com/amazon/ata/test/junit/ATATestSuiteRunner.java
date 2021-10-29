@@ -1,9 +1,7 @@
 package com.amazon.ata.test.junit;
 
 import com.amazon.ata.test.types.ATATestSuiteId;
-
 import com.amazon.ata.test.types.ATATestSuiteReport;
-
 import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;

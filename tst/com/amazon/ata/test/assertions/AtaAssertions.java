@@ -1,7 +1,6 @@
 package com.amazon.ata.test.assertions;
 
 import com.amazon.ata.test.helper.AtaTestHelper;
-
 import org.junit.platform.commons.util.StringUtils;
 
 import java.math.BigDecimal;
