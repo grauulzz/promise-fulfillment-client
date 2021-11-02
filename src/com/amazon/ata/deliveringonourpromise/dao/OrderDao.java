@@ -3,7 +3,6 @@ package com.amazon.ata.deliveringonourpromise.dao;
 import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
 import com.amazon.ata.deliveringonourpromise.types.Order;
 import com.amazon.ata.deliveringonourpromise.types.OrderItem;
-import com.amazon.ata.order.OrderFieldValidator;
 import com.amazon.ata.ordermanipulationauthority.OrderResult;
 import com.amazon.ata.ordermanipulationauthority.OrderResultItem;
 
@@ -41,9 +40,6 @@ public class OrderDao implements ReadOnlyDao<String, Order> {
             return null;
         }
 
-        if (!new OrderFieldValidator().isValidOrderId(orderId)) {
-            return null;
-        }
 
         List<OrderItem> orderItems = new ArrayList<>();
         for (OrderResultItem orderResultItem : omaOrder.getCustomerOrderItemList()) {
