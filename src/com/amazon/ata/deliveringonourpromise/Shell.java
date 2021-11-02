@@ -37,7 +37,6 @@ public class Shell {
     private final ATAUserHandler inputHandler;
 
 
-
     /**
      * Constructs a Shell instance that will use the given service client.
      *

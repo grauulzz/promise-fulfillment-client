@@ -27,18 +27,4 @@ class PromiseAsinComparatorTest {
 
 }
 
-//    @Test
-//    void isNumTest_returnsTrue() {
-//
-//        Promise p1 = Promise.builder().withAsin("123").build();
-//        Promise p2 = Promise.builder().withAsin("123").build();
-//
-//        String str1 = p1.getAsin().substring(1);
-//        String str2 = p2.getAsin().substring(1);
-//
-//        boolean notNull = p1.getAsin() != null && p2.getAsin() != null;
-//        boolean matches = str1.matches("[0-9]+") && str2.matches("[0-9]+");
-//
-//        assertTrue(notNull);
-//        assertTrue(matches);
-//    }
+
