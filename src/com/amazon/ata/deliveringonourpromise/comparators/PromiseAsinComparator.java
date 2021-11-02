@@ -2,7 +2,6 @@ package com.amazon.ata.deliveringonourpromise.comparators;
 
 import com.amazon.ata.deliveringonourpromise.types.Promise;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Comparator;
 
@@ -11,8 +10,6 @@ import java.util.Comparator;
  */
 public class PromiseAsinComparator implements Comparator<Promise>, Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1;
 
     Comparator<Promise> comp = Comparator.comparing(o -> o.getAsin().substring(1));
 
