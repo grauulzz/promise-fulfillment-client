@@ -3,7 +3,6 @@ package com.amazon.ata.test.junit;
 import com.amazon.ata.test.types.ATATestId;
 import com.amazon.ata.test.types.ATATestResult;
 import com.amazon.ata.test.types.ATATestSuiteReport;
-
 import org.junit.platform.engine.TestExecutionResult;
 import org.junit.platform.launcher.TestExecutionListener;
 import org.junit.platform.launcher.TestIdentifier;

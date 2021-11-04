@@ -1,18 +1,12 @@
 package com.amazon.ata.test.reflect;
 
 import com.amazon.ata.test.helper.AtaTestHelper;
-
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Allows finding a {@code Constructor} using introspection by specifying constraints

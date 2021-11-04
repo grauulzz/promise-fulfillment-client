@@ -1,26 +1,23 @@
  package com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4;
 
-import com.amazon.ata.deliveringonourpromise.App;
-import com.amazon.ata.deliveringonourpromise.dao.PromiseDao;
-import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient;
-import com.amazon.ata.deliveringonourpromise.promisehistoryservice.PromiseHistoryClient;
-import com.amazon.ata.deliveringonourpromise.types.Promise;
-import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
-import com.amazon.ata.test.helper.AtaTestHelper;
-import com.amazon.ata.test.reflect.ClassQuery;
+ import com.amazon.ata.deliveringonourpromise.App;
+ import com.amazon.ata.deliveringonourpromise.dao.PromiseDao;
+ import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient;
+ import com.amazon.ata.deliveringonourpromise.promisehistoryservice.PromiseHistoryClient;
+ import com.amazon.ata.deliveringonourpromise.types.Promise;
+ import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
+ import com.amazon.ata.test.helper.AtaTestHelper;
+ import com.amazon.ata.test.reflect.ClassQuery;
+ import org.testng.annotations.BeforeMethod;
+ import org.testng.annotations.Test;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Method;
+ import java.lang.reflect.Modifier;
+ import java.util.Arrays;
+ import java.util.List;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.fail;
+ import static org.testng.Assert.*;
 
 public class MasteryTaskFourTests {
     private PromiseHistoryClient client;
@@ -33,7 +30,7 @@ public class MasteryTaskFourTests {
     @Test
     public void masteryTaskFour_masteryTaskFourFile_existsAndItIsNotEmpty() {
         // GIVEN
-        String masteryTaskFourFileName = "resources/mastery-task4.txt";
+        String masteryTaskFourFileName = "mastery-task4.txt";
 
         // WHEN
         String content = AtaTestHelper.getFileContentFromResources(masteryTaskFourFileName);

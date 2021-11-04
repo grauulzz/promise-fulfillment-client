@@ -1,7 +1,6 @@
 package com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task2;
 
 import com.amazon.ata.test.helper.AtaTestHelper;
-
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class MasteryTaskTwoTests {
     @Test
     public void masteryTaskTwo_masteryTaskTwoFile_existsAndIncludesMultipleTests() {
         // GIVEN
-        String masteryTaskTwoFileName = "resources/OrderDaoTestPlan.md";
+        String masteryTaskTwoFileName = "OrderDaoTestPlan.md";
 
         // WHEN
         String content = AtaTestHelper.getFileContentFromResources(masteryTaskTwoFileName);

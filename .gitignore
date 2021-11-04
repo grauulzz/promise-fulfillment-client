@@ -23,6 +23,7 @@ Thumbs.db
 *.class
 build/
 
+
 # packages 
 *.war
 *.ear

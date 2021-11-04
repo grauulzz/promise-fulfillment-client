@@ -4,17 +4,16 @@ import com.amazon.ata.deliveringonourpromise.App;
 import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient;
 import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
-
+import com.amazon.ata.order.OrderFieldValidator;
+import com.google.common.base.Preconditions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PromiseDaoTest {
 
@@ -49,20 +48,31 @@ public class PromiseDaoTest {
                                  .getCustomerOrderItemList()
                                  .get(0)
                                  .getCustomerOrderItemId();
-        shippedDeliveryPromise = dpsClient.getDeliveryPromiseByOrderItemId(shippedOrderItemId);
+        shippedDeliveryPromise = dpsClient.getPromiseByOrderItemId(shippedOrderItemId);
 
         deliveredOrderItemId = omaClient
                                    .getCustomerOrderByOrderId(deliveredOrderId)
                                    .getCustomerOrderItemList()
                                    .get(0)
                                    .getCustomerOrderItemId();
-        deliveredDeliveryPromise = dpsClient.getDeliveryPromiseByOrderItemId(deliveredOrderItemId);
+        deliveredDeliveryPromise = dpsClient.getPromiseByOrderItemId(deliveredOrderItemId);
         deliveredDeliveryDate = omaClient
                                     .getCustomerOrderByOrderId(deliveredOrderId)
                                     .getOrderShipmentList().get(0)
                                     .getDeliveryDate();
 
         dao = new PromiseDao(dpsClient, omaClient);
+    }
+
+    @Test
+    public void givenNullString_whenCheckNotNullWithMessage_throwsException () {
+
+        OrderFieldValidator order = new OrderFieldValidator();
+
+        boolean condition = order.isValidOrderId(null);
+
+        assertFalse(condition);
+
     }
 
     @Test
@@ -211,4 +221,5 @@ public class PromiseDaoTest {
 
         return null;
     }
+
 }

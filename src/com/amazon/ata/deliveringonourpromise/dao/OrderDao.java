@@ -3,7 +3,6 @@ package com.amazon.ata.deliveringonourpromise.dao;
 import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
 import com.amazon.ata.deliveringonourpromise.types.Order;
 import com.amazon.ata.deliveringonourpromise.types.OrderItem;
-import com.amazon.ata.order.OrderFieldValidator;
 import com.amazon.ata.ordermanipulationauthority.OrderResult;
 import com.amazon.ata.ordermanipulationauthority.OrderResultItem;
 
@@ -15,7 +14,7 @@ import java.util.List;
  */
 public class OrderDao implements ReadOnlyDao<String, Order> {
 
-    private OrderManipulationAuthorityClient omaClient;
+    private final OrderManipulationAuthorityClient omaClient;
 
     /**
      * OrderDao constructor.
@@ -41,9 +40,6 @@ public class OrderDao implements ReadOnlyDao<String, Order> {
             return null;
         }
 
-        if (! new OrderFieldValidator().isValidOrderId(orderId)) {
-            return null;
-        }
 
         List<OrderItem> orderItems = new ArrayList<>();
         for (OrderResultItem orderResultItem : omaOrder.getCustomerOrderItemList()) {
@@ -51,28 +47,28 @@ public class OrderDao implements ReadOnlyDao<String, Order> {
         }
 
         Order.Builder orderBuilder = Order.builder()
-                                         .withOrderId(omaOrder.getOrderId())
-                                         .withCustomerId(omaOrder.getCustomerId())
-                                         .withMarketplaceId(omaOrder.getMarketplaceId())
-                                         .withCondition(omaOrder.getCondition())
-                                         .withCustomerOrderItemList(orderItems)
-                                         .withOrderDate(omaOrder.getOrderDate())
-                                         .withShipOption(omaOrder.getShipOption());
+                .withOrderId(omaOrder.getOrderId())
+                .withCustomerId(omaOrder.getCustomerId())
+                .withMarketplaceId(omaOrder.getMarketplaceId())
+                .withCondition(omaOrder.getCondition())
+                .withCustomerOrderItemList(orderItems)
+                .withOrderDate(omaOrder.getOrderDate())
+                .withShipOption(omaOrder.getShipOption());
 
         return orderBuilder.build();
     }
 
     private OrderItem convertToOrderItem(OrderResultItem orderResultItem) {
         return OrderItem.builder()
-                   .withCustomerOrderItemId(orderResultItem.getCustomerOrderItemId())
-                   .withOrderId(orderResultItem.getOrderId())
-                   .withAsin(orderResultItem.getAsin())
-                   .withMerchantId(orderResultItem.getMerchantId())
-                   .withQuantity(orderResultItem.getQuantity())
-                   .withTitle(orderResultItem.getTitle())
-                   .withIsConfidenceTracked(orderResultItem.isConfidenceTracked())
-                   .withConfidence(orderResultItem.getConfidence())
-                   .build();
+                .withCustomerOrderItemId(orderResultItem.getCustomerOrderItemId())
+                .withOrderId(orderResultItem.getOrderId())
+                .withAsin(orderResultItem.getAsin())
+                .withMerchantId(orderResultItem.getMerchantId())
+                .withQuantity(orderResultItem.getQuantity())
+                .withTitle(orderResultItem.getTitle())
+                .withIsConfidenceTracked(orderResultItem.isConfidenceTracked())
+                .withConfidence(orderResultItem.getConfidence())
+                .build();
     }
 
 }

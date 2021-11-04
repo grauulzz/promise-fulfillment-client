@@ -1,0 +1,222 @@
+@startuml
+class com.amazon.ata.deliveringonourpromise.types.Promise {
+- String customerOrderItemId
+- String asin
+- boolean active
+- ZonedDateTime promiseEffectiveDate
+- ZonedDateTime promiseLatestArrivalDate
+- ZonedDateTime promiseLatestShipDate
+- ZonedDateTime deliveryDate
+- String promiseProvidedBy
+- int confidence
+- <<Create>> Promise()
++ {static} Builder builder()
++ ZonedDateTime getPromiseLatestArrivalDate()
++ String getCustomerOrderItemId()
++ ZonedDateTime getPromiseEffectiveDate()
++ boolean isActive()
++ ZonedDateTime getPromiseLatestShipDate()
++ ZonedDateTime getDeliveryDate()
++ String getPromiseProvidedBy()
++ String getAsin()
++ int getConfidence()
++ void setConfidence(boolean,int)
++ void setDeliveryDate(ZonedDateTime)
++ String toString()
+}
+class com.amazon.ata.deliveringonourpromise.types.Promise.Builder {
+- String customerOrderItemId
+- String asin
+- boolean active
+- ZonedDateTime promiseEffectiveDate
+- ZonedDateTime promiseLatestArrivalDate
+- ZonedDateTime promiseLatestShipDate
+- ZonedDateTime deliveryDate
+- String promiseProvidedBy
++ Builder withCustomerOrderItemId(String)
++ Builder withAsin(String)
++ Builder withIsActive(boolean)
++ Builder withPromiseEffectiveDate(ZonedDateTime)
++ Builder withPromiseLatestArrivalDate(ZonedDateTime)
++ Builder withPromiseLatestShipDate(ZonedDateTime)
++ Builder withDeliveryDate(ZonedDateTime)
++ Builder withPromiseProvidedBy(String)
++ Promise build()
+}
+class com.amazon.ata.deliveringonourpromise.App {
+- <<Create>> App()
++ {static} PromiseHistoryClient getPromiseHistoryClient()
++ {static} GetPromiseHistoryByOrderIdActivity getPromiseHistoryByOrderIdActivity()
++ {static} OrderDao getOrderDao()
++ {static} PromiseDao getPromiseDao()
++ {static} OrderManipulationAuthorityClient getOrderManipulationAuthorityClient()
++ {static} DeliveryPromiseServiceClient getDeliveryPromiseServiceClient()
++ {static} OrderManipulationAuthority getOrderManipulationAuthority()
++ {static} DeliveryPromiseService getDeliveryPromiseService()
++ {static} OrderDatastore getOrderDatastore()
+}
+class com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient {
+- OrderManipulationAuthority omaService
++ <<Create>> OrderManipulationAuthorityClient(OrderManipulationAuthority)
++ OrderResult getCustomerOrderByOrderId(String)
++ OrderResultItem getCustomerOrderItemByOrderItemId(String)
+}
+class com.amazon.ata.deliveringonourpromise.types.PromiseHistory {
+- Order order
+- List<Promise> promises
++ <<Create>> PromiseHistory(Order)
++ Order getOrder()
++ void addPromise(Promise)
++ List<Promise> getPromises()
+}
+class com.amazon.ata.deliveringonourpromise.promisehistoryservice.PromiseHistoryClient {
+- GetPromiseHistoryByOrderIdActivity getPromiseHistoryByOrderIdActivity
++ <<Create>> PromiseHistoryClient(GetPromiseHistoryByOrderIdActivity)
++ PromiseHistory getPromiseHistoryByOrderId(String)
+}
+class com.amazon.ata.deliveringonourpromise.dao.OrderDao {
+- OrderManipulationAuthorityClient omaClient
++ <<Create>> OrderDao(OrderManipulationAuthorityClient)
++ Order get(String)
+- OrderItem convertToOrderItem(OrderResultItem)
+}
+interface com.amazon.ata.deliveringonourpromise.dao.ReadOnlyDao {
+~ O get(I)
+}
+class com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient {
+- DeliveryPromiseService dpService
++ <<Create>> DeliveryPromiseServiceClient(DeliveryPromiseService)
++ Promise getDeliveryPromiseByOrderItemId(String)
+}
+class com.amazon.ata.deliveringonourpromise.Shell {
++ {static} String SHOW_FIXTURES_FLAG
+- {static} String CONTINUE_PROMPT
+- {static} Collection<String> VALID_YES_NO_ANSWERS
+- {static} String ORDER_ID_PROMPT
+- {static} String UNKNOWN_ORDER_MESSAGE
+- {static} String INLINE_PROMPT
+- PromiseHistoryClient promiseHistoryClient
+- ATAUserHandler inputHandler
+- String unusedPrivateString
++ <<Create>> Shell(PromiseHistoryClient,ATAUserHandler)
++ {static} void main(String[])
+~ String handleUserRequest()
+- String renderPromiseHistoryTable(PromiseHistory)
+- String renderOrderTable(Order)
+~ boolean userHasAnotherRequest()
+- void processCommandLineArgs(String[])
+- String renderFixtures()
+}
+class com.amazon.ata.deliveringonourpromise.types.OrderItem {
+- String customerOrderItemId
+- String orderId
+- String asin
+- String merchantId
+- int quantity
+- String title
+- boolean isConfidenceTracked
+- int confidence
+- <<Create>> OrderItem()
++ {static} Builder builder()
++ String getCustomerOrderItemId()
++ String getOrderId()
++ String getAsin()
++ String getMerchantId()
++ int getQuantity()
++ String getTitle()
++ boolean isConfidenceTracked()
++ int getConfidence()
++ boolean equals(Object)
++ int hashCode()
++ String toString()
+}
+class com.amazon.ata.deliveringonourpromise.types.OrderItem.Builder {
+- String customerOrderItemId
+- String orderId
+- String asin
+- String merchantId
+- int quantity
+- String title
+- boolean isConfidenceTracked
+- int confidence
++ Builder withCustomerOrderItemId(String)
++ Builder withOrderId(String)
++ Builder withAsin(String)
++ Builder withMerchantId(String)
++ Builder withQuantity(int)
++ Builder withTitle(String)
++ Builder withIsConfidenceTracked(boolean)
++ Builder withConfidence(int)
++ OrderItem build()
+}
+class com.amazon.ata.deliveringonourpromise.types.Order {
++ String orderId
++ String customerId
++ String marketplaceId
++ OrderCondition condition
++ List<OrderItem> customerOrderItemList
++ String shipOption
++ ZonedDateTime orderDate
+- <<Create>> Order()
++ {static} Builder builder()
++ String getOrderId()
++ String getCustomerId()
++ String getMarketplaceId()
++ OrderCondition getCondition()
++ List<OrderItem> getCustomerOrderItemList()
++ String getShipOption()
++ ZonedDateTime getOrderDate()
++ String toString()
+}
+class com.amazon.ata.deliveringonourpromise.types.Order.Builder {
+- String orderId
+- String customerId
+- String marketplaceId
+- OrderCondition condition
+- List<OrderItem> customerOrderItemList
+- String shipOption
+- ZonedDateTime orderDate
++ Builder withOrderId(String)
++ Builder withCustomerId(String)
++ Builder withMarketplaceId(String)
++ Builder withCondition(OrderCondition)
++ Builder withCustomerOrderItemList(List<OrderItem>)
++ Builder withShipOption(String)
++ Builder withOrderDate(ZonedDateTime)
++ Order build()
+}
+class com.amazon.ata.deliveringonourpromise.dao.PromiseDao {
+- DeliveryPromiseServiceClient dpsClient
+- OrderManipulationAuthorityClient omaClient
++ <<Create>> PromiseDao(DeliveryPromiseServiceClient,OrderManipulationAuthorityClient)
++ List<Promise> get(String)
+- ZonedDateTime getDeliveryDateForOrderItem(String)
+}
+class com.amazon.ata.deliveringonourpromise.activity.GetPromiseHistoryByOrderIdActivity {
+- ReadOnlyDao<String,Order> orderDao
+- ReadOnlyDao<String,List<Promise>> promiseDao
++ <<Create>> GetPromiseHistoryByOrderIdActivity(ReadOnlyDao<String,Order>,ReadOnlyDao<String,List<Promise>>)
++ PromiseHistory getPromiseHistoryByOrderId(String)
+}
+
+
+com.amazon.ata.deliveringonourpromise.types.Promise +.. com.amazon.ata.deliveringonourpromise.types.Promise.Builder
+com.amazon.ata.deliveringonourpromise.dao.ReadOnlyDao <|.. com.amazon.ata.deliveringonourpromise.dao.OrderDao
+com.amazon.ata.deliveringonourpromise.types.OrderItem +.. com.amazon.ata.deliveringonourpromise.types.OrderItem.Builder
+com.amazon.ata.deliveringonourpromise.types.Order +.. com.amazon.ata.deliveringonourpromise.types.Order.Builder
+com.amazon.ata.deliveringonourpromise.dao.ReadOnlyDao <|.. com.amazon.ata.deliveringonourpromise.dao.PromiseDao
+
+OrderDao -> ReadOnlyDao
+PromiseDao -> ReadOnlyDao
+
+PromiseHistoryClient -> GetPromiseHistoryByOrderIdActivity
+GetPromiseHistoryByOrderIdActivity -> PromiseDao
+GetPromiseHistoryByOrderIdActivity -> OrderDao
+PromiseDao -> DeliveryPromiseServiceClient
+PromiseDao -> OrderManipulationAuthorityClient
+OrderDao -> OrderManipulationAuthorityClient
+PromiseHistory -> Order
+PromiseHistory -> Promise
+Order -> OrderItem
+
+@enduml

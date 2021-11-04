@@ -3,16 +3,15 @@ package com.amazon.ata.deliveringonourpromise.deliverypromiseservice;
 import com.amazon.ata.deliveringonourpromise.App;
 import com.amazon.ata.deliveringonourpromise.data.OrderDatastore;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
-
+import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class DeliveryPromiseServiceClientTest {
+
     private DeliveryPromiseServiceClient client;
     private String orderItemId;
 
@@ -29,12 +28,21 @@ public class DeliveryPromiseServiceClientTest {
     }
 
     @Test
+    void getPromiseHistoryByOrderId_nullOrderItemId_returnsNull() {
+
+
+        PromiseHistory promiseHistory = new PromiseHistory(null);
+
+        assertNull(promiseHistory.getOrder());
+    }
+
+    @Test
     public void getDeliveryPromiseByOrderItemId_nullOrderItemId_returnsNull() {
         // GIVEN
         orderItemId = null;
 
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNull(promise);
@@ -46,7 +54,7 @@ public class DeliveryPromiseServiceClientTest {
         orderItemId = "20";
 
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNull(promise);
@@ -55,7 +63,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_hasCorrectOrderItemId() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertEquals(orderItemId, promise.getCustomerOrderItemId());
@@ -64,7 +72,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_setsLatestArrivalDate() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNotNull(promise.getPromiseLatestArrivalDate());
@@ -73,7 +81,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_setsPromiseLatestShipDate() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNotNull(promise.getPromiseLatestShipDate());
@@ -82,7 +90,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_setsEffectiveDate() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNotNull(promise.getPromiseEffectiveDate());
@@ -91,7 +99,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_setsPromiseProvidedBy() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNotNull(promise.getPromiseProvidedBy());
@@ -100,7 +108,7 @@ public class DeliveryPromiseServiceClientTest {
     @Test
     public void getDeliveryPromiseByOrderItemId_validItemId_setsAsin() {
         // WHEN
-        Promise promise = client.getDeliveryPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(orderItemId);
 
         // THEN
         assertNotNull(promise.getAsin());

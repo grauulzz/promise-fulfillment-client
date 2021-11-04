@@ -1,5 +1,6 @@
 package com.amazon.ata.deliveringonourpromise.dao;
 
+import com.amazon.ata.deliveringonourpromise.IServiceClient;
 import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient;
 import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
@@ -15,21 +16,34 @@ import java.util.List;
  * DAO implementation for Promises.
  */
 public class PromiseDao implements ReadOnlyDao<String, List<Promise>> {
-    private DeliveryPromiseServiceClient dpsClient;
-    private OrderManipulationAuthorityClient omaClient;
+    private final OrderManipulationAuthorityClient omaClient;
+    private List<IServiceClient> serviceClients = new ArrayList<>();
 
     /**
      * PromiseDao constructor, accepting service clients for DPS and OMA.
+     *
      * @param dpsClient DeliveryPromiseServiceClient for DAO to access DPS
      * @param omaClient OrderManipulationAuthorityClient for DAO to access OMA
      */
     public PromiseDao(DeliveryPromiseServiceClient dpsClient, OrderManipulationAuthorityClient omaClient) {
-        this.dpsClient = dpsClient;
+        this.serviceClients.add(dpsClient);
         this.omaClient = omaClient;
     }
 
     /**
+     * Instantiates a new Promise dao.
+     *
+     * @param serviceClients the service clients
+     * @param omaClient      the oma client
+     */
+    public PromiseDao(List<IServiceClient> serviceClients, OrderManipulationAuthorityClient omaClient) {
+        this.omaClient = omaClient;
+        this.serviceClients = serviceClients;
+    }
+
+    /**
      * Returns a list of all Promises associated with the given order item ID.
+     *
      * @param customerOrderItemId the order item ID to fetch promise for
      * @return a List of promises for the given order item ID
      */
@@ -42,10 +56,13 @@ public class PromiseDao implements ReadOnlyDao<String, List<Promise>> {
 
         // fetch Promise from Delivery Promise Service. If exists, add to list of Promises to return.
         // Set delivery date
-        Promise dpsPromise = dpsClient.getDeliveryPromiseByOrderItemId(customerOrderItemId);
-        if (dpsPromise != null) {
-            dpsPromise.setDeliveryDate(itemDeliveryDate);
-            promises.add(dpsPromise);
+
+        for (IServiceClient client : serviceClients) {
+            Promise dpsPromise = client.getPromiseByOrderItemId(customerOrderItemId);
+            if (dpsPromise != null) {
+                dpsPromise.setDeliveryDate(itemDeliveryDate);
+                promises.add(dpsPromise);
+            }
         }
 
         return promises;
@@ -61,19 +78,13 @@ public class PromiseDao implements ReadOnlyDao<String, List<Promise>> {
     private ZonedDateTime getDeliveryDateForOrderItem(String customerOrderItemId) {
         OrderResultItem orderResultItem = omaClient.getCustomerOrderItemByOrderItemId(customerOrderItemId);
 
-        if (null == orderResultItem) {
-            return null;
-        }
-
-        OrderResult orderResult = omaClient.getCustomerOrderByOrderId(orderResultItem.getOrderId());
-
-        for (OrderShipment shipment : orderResult.getOrderShipmentList()) {
-            for (OrderShipment.ShipmentItem shipmentItem : shipment.getCustomerShipmentItems()) {
-                if (shipmentItem.getCustomerOrderItemId().equals(customerOrderItemId)) {
-                    return shipment.getDeliveryDate();
-                }
+        if (null != orderResultItem) {
+            OrderResult orderResult = omaClient.getCustomerOrderByOrderId(orderResultItem.getOrderId());
+            for (OrderShipment shipment : orderResult.getOrderShipmentList()) {
+                return shipment.getDeliveryDate();
             }
         }
+
 
         // didn't find a delivery date!
         return null;

@@ -2,19 +2,49 @@ package com.amazon.ata.deliveringonourpromise.types;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderItemTest {
-    private String customerOrderItemId = "1";
-    private String orderId = "2";
-    private String asin = "3";
-    private int confidence = 10;
-    private boolean isConfidenceTracked = false;
-    private String merchantId = "4";
-    private int quantity = 103;
-    private String title = "A title";
+    private final String customerOrderItemId = "1";
+    private final String orderId = "2";
+    private final String asin = "3";
+    private final int confidence = 10;
+    private final boolean isConfidenceTracked = false;
+    private final String merchantId = "4";
+    private final int quantity = 103;
+    private final String title = "A title";
+
+    @Test
+    public void equals_OrderItems_returnsFalse() {
+
+        // GIVEN
+        OrderItem orderItem1 = getGenericOrderItemBuilder().withCustomerOrderItemId("1234").build();
+
+        // WHEN
+        boolean result = orderItem1.equals(null);
+        boolean getClassResult = orderItem1.equals(new Object());
+
+
+        // THEN
+        assertFalse(result);
+        assertFalse(getClassResult);
+
+    }
+
+    @Test
+    public void equals_OrderItems_returnsTrue() {
+
+        // GIVEN
+        OrderItem orderItem1 = getGenericOrderItemBuilder().withCustomerOrderItemId("1234").build();
+
+        // WHEN
+        boolean result = orderItem1.equals(orderItem1);
+
+        // THEN
+        assertTrue(result);
+
+    }
+
 
     @Test
     void equals_onEqualOrderItems_returnsTrue() {
@@ -27,8 +57,8 @@ public class OrderItemTest {
 
         // THEN
         assertTrue(
-            result,
-            String.format("Expected %s and %s OrderItems to be equal but they were not", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to be equal but they were not", orderItem1, orderItem2)
         );
     }
 
@@ -43,8 +73,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -59,8 +89,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -75,8 +105,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -90,8 +120,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -106,8 +136,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -122,8 +152,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -138,8 +168,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -154,8 +184,8 @@ public class OrderItemTest {
 
         // THEN
         assertFalse(
-            result,
-            String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
+                result,
+                String.format("Expected %s and %s OrderItems to not be equal but they were", orderItem1, orderItem2)
         );
     }
 
@@ -167,27 +197,27 @@ public class OrderItemTest {
 
         // THEN
         assertEquals(
-            orderItem1.hashCode(),
-            orderItem2.hashCode(),
-            String.format(
-                "Expected hashCode of %s (%d) and %s (%d) OrderItems to be equal but they were not",
-                orderItem1,
                 orderItem1.hashCode(),
-                orderItem2,
-                orderItem2.hashCode())
+                orderItem2.hashCode(),
+                String.format(
+                        "Expected hashCode of %s (%d) and %s (%d) OrderItems to be equal but they were not",
+                        orderItem1,
+                        orderItem1.hashCode(),
+                        orderItem2,
+                        orderItem2.hashCode())
         );
     }
 
     private OrderItem.Builder getGenericOrderItemBuilder() {
         return OrderItem.builder()
-                   .withCustomerOrderItemId(customerOrderItemId)
-                   .withOrderId(orderId)
-                   .withAsin(asin)
-                   .withConfidence(confidence)
-                   .withIsConfidenceTracked(isConfidenceTracked)
-                   .withMerchantId(merchantId)
-                   .withQuantity(quantity)
-                   .withTitle(title);
+                .withCustomerOrderItemId(customerOrderItemId)
+                .withOrderId(orderId)
+                .withAsin(asin)
+                .withConfidence(confidence)
+                .withIsConfidenceTracked(isConfidenceTracked)
+                .withMerchantId(merchantId)
+                .withQuantity(quantity)
+                .withTitle(title);
     }
 
 

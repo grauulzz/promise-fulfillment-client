@@ -33,42 +33,36 @@ public class Shell {
 
     private static final String INLINE_PROMPT = "> ";
 
-    private PromiseHistoryClient promiseHistoryClient;
-    private ATAUserHandler inputHandler;
+    private final PromiseHistoryClient promiseHistoryClient;
+    private final ATAUserHandler inputHandler;
 
-    // FIXME: Added to cause a problem with Spotbug
-    private String unusedPrivateString;
 
     /**
      * Constructs a Shell instance that will use the given service client.
      *
      * @param promiseHistoryClient The client to use to communicate with the promise history service.
-     * @param userHandler The ATAUserHandler to use for asking user for their input.
+     * @param userHandler          The ATAUserHandler to use for asking user for their input.
      */
     public Shell(PromiseHistoryClient promiseHistoryClient, ATAUserHandler userHandler) {
         this.promiseHistoryClient = promiseHistoryClient;
         this.inputHandler = userHandler;
     }
 
-    // FIXME: I need some code to mess up Checkstyle. I put opening braces on their own line
+
     /**
      * Command Line Interface entry point. Arguments are ignored.
      *
      * @param args command line args (ignored).
-     * */
-    public static void main(String[] args)
-    {
+     */
+    public static void main(String[] args) {
         Shell shell = new Shell(App.getPromiseHistoryClient(), new ATAUserHandler());
         shell.processCommandLineArgs(args);
 
-        try
-        {
-            do
-            {
+        try {
+            do {
                 System.out.println(shell.handleUserRequest());
             } while (shell.userHasAnotherRequest());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Error encountered. Exiting.");
         }
 
