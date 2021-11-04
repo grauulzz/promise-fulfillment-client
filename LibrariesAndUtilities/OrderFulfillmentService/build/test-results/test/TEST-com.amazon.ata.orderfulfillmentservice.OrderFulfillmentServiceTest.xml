@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:06" hostname="DESKTOP-5B2P3R4" time="3.122">
+  <properties/>
+  <testcase name="getOrderPromise_hasPromiseDataSource()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="2.475"/>
+  <testcase name="getOrderPromise_hasPromiseEffectiveDate()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.039"/>
+  <testcase name="getOrderPromise_hasFulfillmentSvcSubclassId()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.03"/>
+  <testcase name="getOrderPromise_hasCorrectCustomerOrderItemId()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.052"/>
+  <testcase name="getOrderPromise_returnNullOnNonexistentOrderItemId()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.021"/>
+  <testcase name="getOrderPromise_hasPromiseLatestShipDate()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.018"/>
+  <testcase name="getOrderPromise_hasCorrectPromiseQuantity()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.021"/>
+  <testcase name="getOrderPromise_hasOfsPromiseProvidedBy()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.013"/>
+  <testcase name="getOrderPromise_hasPromiseLatestArrivalDate()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.014"/>
+  <testcase name="getOrderPromise_whenDpsAndOpsShouldAgree_hasSamePromiseDateAsDps()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.261"/>
+  <testcase name="getOrderPromise_isActiveIfItExists()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.031"/>
+  <testcase name="getOrderPromise_hasPlanQualityTypeCode()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.021"/>
+  <testcase name="getOrderPromise_hasCorrectCustomerOrderId()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.02"/>
+  <testcase name="getOrderPromise_whenDpsAndOpsShouldDisagree_hasLaterPromiseThanDps()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.042"/>
+  <testcase name="getOrderPromise_hasCorrectAsin()" classname="com.amazon.ata.orderfulfillmentservice.OrderFulfillmentServiceTest" time="0.022"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

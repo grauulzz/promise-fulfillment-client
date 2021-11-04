@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClientTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:15:56" hostname="DESKTOP-5B2P3R4" time="1.76">
+  <properties/>
+  <testcase name="getCustomerOrderByOrderId_invalidOrderId_returnsNull()" classname="com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClientTest" time="1.74"/>
+  <testcase name="getCustomerOrderByOrderId_validOrderId_returnsOrderResult()" classname="com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClientTest" time="0.004"/>
+  <testcase name="getCustomerOrderItemByOrderItemId_invalidOrderItemId_returnsNull()" classname="com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClientTest" time="0.007"/>
+  <testcase name="getCustomerOrderItemByOrderItemId_validOrderItemId_returnsOrderResultItem()" classname="com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClientTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

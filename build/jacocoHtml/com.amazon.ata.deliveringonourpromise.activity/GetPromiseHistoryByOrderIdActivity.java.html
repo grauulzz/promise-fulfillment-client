@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GetPromiseHistoryByOrderIdActivity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DeliveringOnOurPromise</a> &gt; <a href="index.source.html" class="el_package">com.amazon.ata.deliveringonourpromise.activity</a> &gt; <span class="el_source">GetPromiseHistoryByOrderIdActivity.java</span></div><h1>GetPromiseHistoryByOrderIdActivity.java</h1><pre class="source lang-java linenums">package com.amazon.ata.deliveringonourpromise.activity;
+
+import com.amazon.ata.deliveringonourpromise.dao.ReadOnlyDao;
+import com.amazon.ata.deliveringonourpromise.types.Order;
+import com.amazon.ata.deliveringonourpromise.types.OrderItem;
+import com.amazon.ata.deliveringonourpromise.types.Promise;
+import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
+
+import java.util.List;
+
+/**
+ * Activity class, handling the GetPromiseHistoryByOrderId API.
+ */
+public class GetPromiseHistoryByOrderIdActivity {
+    private final ReadOnlyDao&lt;String, Order&gt; orderDao;
+    private final ReadOnlyDao&lt;String, List&lt;Promise&gt;&gt; promiseDao;
+
+    /**
+     * Instantiates an activity for handling the API, accepting the relevant DAOs to
+     * perform its work.
+     *
+     * @param orderDao   data access object fo retrieving Orders by order ID
+     * @param promiseDao data access object for retrieving Promises by order item ID
+     */
+    public GetPromiseHistoryByOrderIdActivity(ReadOnlyDao&lt;String, Order&gt; orderDao,
+<span class="fc" id="L26">                                              ReadOnlyDao&lt;String, List&lt;Promise&gt;&gt; promiseDao) {</span>
+<span class="fc" id="L27">        this.orderDao = orderDao;</span>
+<span class="fc" id="L28">        this.promiseDao = promiseDao;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * Returns the PromiseHistory for the given order ID, if the order exists. If the order does
+     * not exist a PromiseHistory with a null order and no promises will be returned.
+     *
+     * @param orderId The order ID to fetch PromiseHistory for
+     * @return PromiseHistory containing the order and promise history for that order
+     */
+    public PromiseHistory getPromiseHistoryByOrderId(String orderId) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (null == orderId) {</span>
+<span class="fc" id="L40">            throw new IllegalArgumentException(&quot;order ID cannot be null&quot;);</span>
+        }
+
+<span class="fc" id="L43">        Order order = orderDao.get(orderId);</span>
+
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (order == null) {</span>
+<span class="fc" id="L46">            return new PromiseHistory(null);</span>
+        }
+
+<span class="fc" id="L49">        List&lt;OrderItem&gt; customerOrderItems = order.getCustomerOrderItemList();</span>
+
+<span class="fc" id="L51">        PromiseHistory history = new PromiseHistory(order);</span>
+
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (OrderItem orderItem : customerOrderItems) {</span>
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">            if (orderItem != null) {</span>
+<span class="fc" id="L55">                List&lt;Promise&gt; promises = promiseDao.get(orderItem.getCustomerOrderItemId());</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                for (Promise promise : promises) {</span>
+<span class="fc" id="L57">                    promise.setConfidence(orderItem.isConfidenceTracked(), orderItem.getConfidence());</span>
+<span class="fc" id="L58">                    history.addPromise(promise);</span>
+<span class="fc" id="L59">                }</span>
+            }
+<span class="fc" id="L61">        }</span>
+
+
+<span class="fc" id="L64">        return history;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

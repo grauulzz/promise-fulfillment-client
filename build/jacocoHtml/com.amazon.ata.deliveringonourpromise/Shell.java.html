@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Shell.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DeliveringOnOurPromise</a> &gt; <a href="index.source.html" class="el_package">com.amazon.ata.deliveringonourpromise</a> &gt; <span class="el_source">Shell.java</span></div><h1>Shell.java</h1><pre class="source lang-java linenums">package com.amazon.ata.deliveringonourpromise;
+
+import com.amazon.ata.deliveringonourpromise.data.OrderDatastore;
+import com.amazon.ata.deliveringonourpromise.promisehistoryservice.PromiseHistoryClient;
+import com.amazon.ata.deliveringonourpromise.types.Order;
+import com.amazon.ata.deliveringonourpromise.types.Promise;
+import com.amazon.ata.deliveringonourpromise.types.PromiseHistory;
+import com.amazon.ata.input.console.ATAUserHandler;
+import com.amazon.ata.string.TextTable;
+
+import com.google.common.annotations.VisibleForTesting;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Owns the UI for the DeliveringOnOurPromise app. Provides command-line interface
+ * to the user, allowing them to submit order IDs to fetch promise histories for,
+ * and displaying the results.
+ */
+public class Shell {
+    public static final String SHOW_FIXTURES_FLAG = &quot;--show-fixtures&quot;;
+    private static final String CONTINUE_PROMPT = &quot;Would you like to enter another orderId? (y/n)&quot;;
+<span class="fc" id="L27">    private static final Collection&lt;String&gt; VALID_YES_NO_ANSWERS =</span>
+<span class="fc" id="L28">            Collections.unmodifiableList(Arrays.asList(&quot;y&quot;, &quot;n&quot;, &quot;Y&quot;, &quot;N&quot;));</span>
+    private static final String ORDER_ID_PROMPT =
+            &quot;Please enter the orderId you would like to view the Promise History for.&quot;;
+    private static final String UNKNOWN_ORDER_MESSAGE =
+            &quot;Unable to find any order data for orderId: %s. Please check your order id and try again.&quot;;
+
+    private static final String INLINE_PROMPT = &quot;&gt; &quot;;
+
+    private final PromiseHistoryClient promiseHistoryClient;
+    private final ATAUserHandler inputHandler;
+
+
+    /**
+     * Constructs a Shell instance that will use the given service client.
+     *
+     * @param promiseHistoryClient The client to use to communicate with the promise history service.
+     * @param userHandler          The ATAUserHandler to use for asking user for their input.
+     */
+<span class="fc" id="L46">    public Shell(PromiseHistoryClient promiseHistoryClient, ATAUserHandler userHandler) {</span>
+<span class="fc" id="L47">        this.promiseHistoryClient = promiseHistoryClient;</span>
+<span class="fc" id="L48">        this.inputHandler = userHandler;</span>
+<span class="fc" id="L49">    }</span>
+
+
+    /**
+     * Command Line Interface entry point. Arguments are ignored.
+     *
+     * @param args command line args (ignored).
+     */
+    public static void main(String[] args) {
+<span class="fc" id="L58">        Shell shell = new Shell(App.getPromiseHistoryClient(), new ATAUserHandler());</span>
+<span class="fc" id="L59">        shell.processCommandLineArgs(args);</span>
+
+        try {
+            do {
+<span class="fc" id="L63">                System.out.println(shell.handleUserRequest());</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            } while (shell.userHasAnotherRequest());</span>
+<span class="fc" id="L65">        } catch (Exception e) {</span>
+<span class="fc" id="L66">            System.out.println(&quot;Error encountered. Exiting.&quot;);</span>
+<span class="nc" id="L67">        }</span>
+
+<span class="fc" id="L69">        System.out.println(&quot;Thank you for using the Promise History CLI. Have a great day!\n\n&quot;);</span>
+<span class="fc" id="L70">    }</span>
+
+    /**
+     * Handles a user request to fetch promise history for order IDs, and returns the text to display
+     * to user.
+     *
+     * @return the user-facing output from the last request.
+     */
+    @VisibleForTesting
+    String handleUserRequest() {
+        String response;
+
+        do {
+<span class="fc" id="L83">            response = inputHandler.getString(ORDER_ID_PROMPT, INLINE_PROMPT).trim();</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">        } while (&quot;&quot;.equals(response));</span>
+
+<span class="fc" id="L86">        PromiseHistory promiseHistory = promiseHistoryClient.getPromiseHistoryByOrderId(response);</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">        if (promiseHistory.getOrder() == null) {</span>
+<span class="fc" id="L88">            return String.format(UNKNOWN_ORDER_MESSAGE, response);</span>
+        }
+<span class="fc" id="L90">        return renderOrderTable(promiseHistory.getOrder()) + renderPromiseHistoryTable(promiseHistory);</span>
+    }
+
+    /**
+     * Generates the user-facing representation of the given promise history.
+     *
+     * @param promiseHistory The PromiseHistory to render to user-facing String
+     * @return The String representation of the promise history to display to user
+     */
+    private String renderPromiseHistoryTable(PromiseHistory promiseHistory) {
+<span class="fc" id="L100">        List&lt;String&gt; columnNames = Arrays.asList(</span>
+                &quot;EFFECTIVE DATE&quot;,
+                &quot;ASIN&quot;,
+                &quot;ITEM ID&quot;,
+                &quot;ACTIVE&quot;,
+                &quot;PROMISED SHIP DATE&quot;,
+                &quot;PROMISED DELIVERY DATE&quot;,
+                &quot;DELIVERY DATE&quot;,
+                &quot;PROVIDED BY&quot;,
+                &quot;CONFIDENCE&quot;
+        );
+
+<span class="fc" id="L112">        List&lt;List&lt;String&gt;&gt; promiseRows = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">        for (Promise promise : promiseHistory.getPromises()) {</span>
+<span class="fc" id="L114">            List&lt;String&gt; row = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L115">            promiseRows.add(row);</span>
+
+<span class="fc bfc" id="L117" title="All 2 branches covered.">            if (promise.getPromiseEffectiveDate() != null) {</span>
+<span class="fc" id="L118">                row.add(promise.getPromiseEffectiveDate().toLocalDateTime().toString());</span>
+            } else {
+<span class="fc" id="L120">                row.add(null);</span>
+            }
+<span class="fc" id="L122">            row.add(promise.getAsin());</span>
+<span class="fc" id="L123">            row.add(promise.getCustomerOrderItemId());</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">            row.add(promise.isActive() ? &quot;Y&quot; : &quot;N&quot;);</span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">            if (promise.getPromiseLatestShipDate() != null) {</span>
+<span class="fc" id="L126">                row.add(promise.getPromiseLatestShipDate().toLocalDateTime().toString());</span>
+            } else {
+<span class="fc" id="L128">                row.add(null);</span>
+            }
+<span class="fc bfc" id="L130" title="All 2 branches covered.">            if (promise.getPromiseLatestArrivalDate() != null) {</span>
+<span class="fc" id="L131">                row.add(promise.getPromiseLatestArrivalDate().toLocalDateTime().toString());</span>
+            } else {
+<span class="fc" id="L133">                row.add(null);</span>
+            }
+<span class="fc bfc" id="L135" title="All 2 branches covered.">            if (promise.getDeliveryDate() != null) {</span>
+<span class="fc" id="L136">                row.add(promise.getDeliveryDate().toLocalDateTime().toString());</span>
+            } else {
+<span class="fc" id="L138">                row.add(null);</span>
+            }
+<span class="fc" id="L140">            row.add(promise.getPromiseProvidedBy());</span>
+<span class="fc" id="L141">            Integer confidence = promise.getConfidence();</span>
+<span class="fc" id="L142">            row.add(confidence.toString());</span>
+<span class="fc" id="L143">        }</span>
+
+<span class="fc" id="L145">        return new TextTable(columnNames, promiseRows).toString();</span>
+    }
+
+    /**
+     * Generates the user-facing representation of the given order.
+     *
+     * @param order The Order to render to String for display in the UI
+     * @return The String representation of Order to display to user
+     */
+    private String renderOrderTable(Order order) {
+<span class="fc" id="L155">        List&lt;String&gt; columnNames = Arrays.asList(</span>
+                &quot;ORDER DATE&quot;, &quot;ORDER ID&quot;, &quot;MARKETPLACE&quot;, &quot;TIMEZONE&quot;, &quot;CONDITION&quot;, &quot;SHIP OPTION&quot;, &quot;CUSTOMER ID&quot;
+        );
+
+<span class="fc" id="L159">        List&lt;String&gt; orderFields = new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L160" title="1 of 2 branches missed.">        if (order != null) {</span>
+<span class="fc bfc" id="L161" title="All 2 branches covered.">            if (order.getOrderDate() != null) {</span>
+<span class="fc" id="L162">                orderFields.add(order.getOrderDate().toLocalDateTime().toString());</span>
+            } else {
+<span class="fc" id="L164">                orderFields.add(null);</span>
+            }
+<span class="fc" id="L166">            orderFields.add(order.getOrderId());</span>
+<span class="fc" id="L167">            orderFields.add(order.getMarketplaceId());</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">            if (order.getOrderDate() != null) {</span>
+<span class="fc" id="L169">                orderFields.add(order.getOrderDate().getZone().toString());</span>
+            } else {
+<span class="fc" id="L171">                orderFields.add(null);</span>
+            }
+<span class="fc bfc" id="L173" title="All 2 branches covered.">            if (order.getCondition() != null) {</span>
+<span class="fc" id="L174">                orderFields.add(order.getCondition().toString());</span>
+            } else {
+<span class="fc" id="L176">                orderFields.add(null);</span>
+            }
+<span class="fc" id="L178">            orderFields.add(order.getShipOption());</span>
+<span class="fc" id="L179">            orderFields.add(order.getCustomerId());</span>
+        }
+
+<span class="fc" id="L182">        return new TextTable(columnNames, Arrays.asList(orderFields)).toString();</span>
+    }
+
+    /**
+     * Asks user if they want to submit another request and return boolean indicating their answer.
+     *
+     * @return true if user has another order ID to request; false otherwise
+     */
+    @VisibleForTesting
+    boolean userHasAnotherRequest() {
+<span class="fc" id="L192">        String answer = inputHandler.getString(VALID_YES_NO_ANSWERS, CONTINUE_PROMPT, INLINE_PROMPT);</span>
+<span class="fc bfc" id="L193" title="All 4 branches covered.">        return answer.equals(&quot;y&quot;) || answer.equals(&quot;Y&quot;);</span>
+    }
+
+    private void processCommandLineArgs(String[] args) {
+<span class="pc bpc" id="L197" title="2 of 4 branches missed.">        if (args.length &gt; 0 &amp;&amp; args[0].equals(SHOW_FIXTURES_FLAG)) {</span>
+<span class="fc" id="L198">            System.out.println(&quot;\nHere are a few test orders you can use:&quot;);</span>
+<span class="fc" id="L199">            System.out.println(renderFixtures());</span>
+        }
+<span class="fc" id="L201">    }</span>
+
+    private String renderFixtures() {
+<span class="fc" id="L204">        return OrderDatastore.getDatastore().getOrderFixturesTable();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

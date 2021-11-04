@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" tests="28" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:11" hostname="DESKTOP-5B2P3R4" time="0.123">
+  <properties/>
+  <testcase name="getCustomerOrderByOrderId_validOrderIdReturnsOrderWithOrderId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.041"/>
+  <testcase name="getCustomerOrderByOrderId_allShipmentItemsHaveOrderItemId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderItemByOrderItemId_orderItemExistsInOrder()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.004"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveSupplyCodeDate()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveZip()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderItemByOrderItemId_returnsNullOnNonexistentOrderItemId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_allOrderItemsAreInShipmentsSomewhere()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.004"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveTitle()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_allShipmentItemsHavePositiveQuantity()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderItemByOrderItemId_orderItemHasCorrectOrderItemId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveCondition()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_hasCondition()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.003"/>
+  <testcase name="getCustomerOrderByOrderId_hasShipOption()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveCreationDate()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveWarehouseId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_hasOrderDate()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveShipOption()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveSupplyCode()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveShipmentItems()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_validOrderIdOrderIdsMatch()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveMerchantId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderShipmentsHaveShipmentId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveAsin()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.002"/>
+  <testcase name="getCustomerOrderByOrderId_hasCustomerId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_hasMarketplaceId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_returnsNullForUnrecognizedOrderId()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_orderItemsHaveApprovalDate()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.001"/>
+  <testcase name="getCustomerOrderByOrderId_shipmentItemQuantitiesLessThanOrEqualOrderItemQuantities()" classname="com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderManipulationAuthorityClient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DeliveringOnOurPromise</a> &gt; <a href="index.source.html" class="el_package">com.amazon.ata.deliveringonourpromise.ordermanipulationauthority</a> &gt; <span class="el_source">OrderManipulationAuthorityClient.java</span></div><h1>OrderManipulationAuthorityClient.java</h1><pre class="source lang-java linenums">package com.amazon.ata.deliveringonourpromise.ordermanipulationauthority;
+
+import com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthority;
+import com.amazon.ata.ordermanipulationauthority.OrderResult;
+import com.amazon.ata.ordermanipulationauthority.OrderResultItem;
+
+/**
+ * Client for accessing the OrderManipulationAuthority service.
+ */
+public class OrderManipulationAuthorityClient {
+    private final OrderManipulationAuthority omaService;
+
+    /**
+     * Create new client that calls OMA with the given service object.
+     *
+     * @param service The OrderManipulationAuthority that this client will call
+     */
+<span class="fc" id="L18">    public OrderManipulationAuthorityClient(OrderManipulationAuthority service) {</span>
+<span class="fc" id="L19">        this.omaService = service;</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * Fetches the Order for the given order ID.
+     *
+     * @param orderId String representing the order ID to fetch the order for.
+     * @return the Order for the given order ID if found; or null, otherwise
+     */
+    public OrderResult getCustomerOrderByOrderId(String orderId) {
+<span class="fc" id="L29">        return omaService.getCustomerOrderByOrderId(orderId);</span>
+    }
+
+    /**
+     * Fetches the OrderItem for the given order item ID, if it exists.
+     *
+     * @param orderItemId the order item ID to fetch the order item ID for
+     * @return the OrderItem for the given order Item ID if found; or null, otherwise
+     */
+    public OrderResultItem getCustomerOrderItemByOrderItemId(String orderItemId) {
+<span class="fc" id="L39">        return omaService.getCustomerOrderItemByOrderItemId(orderItemId);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.deliveringonourpromise.data.OrderFixtureTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:02" hostname="DESKTOP-5B2P3R4" time="0.017">
+  <properties/>
+  <testcase name="getOrderItemIds_populatedOrderData_returnsOrderItemIds()" classname="com.amazon.ata.deliveringonourpromise.data.OrderFixtureTest" time="0.008"/>
+  <testcase name="getOrderItemIds_nullOrderData_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.data.OrderFixtureTest" time="0.002"/>
+  <testcase name="getOrderId_populatedOrderData_returnsOrderId()" classname="com.amazon.ata.deliveringonourpromise.data.OrderFixtureTest" time="0.002"/>
+  <testcase name="getOrderId_nullOrderData_returnsNull()" classname="com.amazon.ata.deliveringonourpromise.data.OrderFixtureTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
