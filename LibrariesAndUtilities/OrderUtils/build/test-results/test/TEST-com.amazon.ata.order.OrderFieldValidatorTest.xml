@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.order.OrderFieldValidatorTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:13" hostname="DESKTOP-5B2P3R4" time="0.1">
+  <properties/>
+  <testcase name="isValidOrderId_longThirdSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.046"/>
+  <testcase name="isValidOrderId_emptyStringReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidCondition_returnsFalseOnSeven()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidOrderId_nullReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidOrderId_misplacedHyphensReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidOrderId_nonNumericStringReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidCondition_returnsFalseOnNegative()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidOrderId_shortFirstSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidOrderId_shortSecondSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidOrderId_shortThirdSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidCondition_returnsFalseOnLargeNumber()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <testcase name="isValidOrderId_missingHyphensReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.001"/>
+  <testcase name="isValidCondition_returnsTrueBetweenZeroAndSix()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidOrderId_longFirstSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.001"/>
+  <testcase name="isValidOrderId_validFormatReturnsTrue()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.003"/>
+  <testcase name="isValidOrderId_longSecondSegmentReturnsFalse()" classname="com.amazon.ata.order.OrderFieldValidatorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

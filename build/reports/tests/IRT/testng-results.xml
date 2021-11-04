@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-04T15:11:37 CDT" name="ServiceIntegrationTestsSuite" finished-at="2021-11-04T15:11:37 CDT" duration-ms="311">
+    <groups>
+    </groups>
+    <test started-at="2021-11-04T15:11:37 CDT" name="IntegrationRegressionTests" finished-at="2021-11-04T15:11:37 CDT" duration-ms="311">
+      <class name="com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests">
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746401-0000002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B07FDNSJ63, 20655079937898, N, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, 72]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746401-0000003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B000LQ78YY, 20655079937911, N, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, DPS, [^|]*]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746402-0000002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B07MVQL5RT, 20655079937950, N, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, 72]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746402-0000001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B0145IWKBE, 20655079937924, Y, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, -94]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746403-0000001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B01BKTAY2I, 20655079937976, N, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, -94]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746403-0000002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B01MZEEFNX, 20655079938015, Y, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, -94]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testFixturePromises(java.lang.String,java.util.List)[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testFixturePromises" data-provider="fixtureFields" finished-at="2021-11-04T15:11:37 CDT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[900-3746401-0000001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, B01MZEEFNX, 20655079937885, Y, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}, [^|]*, DPS, -94]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFixturePromises -->
+        <test-method signature="testOrderHeaderColumns()[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testOrderHeaderColumns" finished-at="2021-11-04T15:11:37 CDT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderHeaderColumns -->
+        <test-method signature="testPromiseHeaderColumns()[pri:0, instance:com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests@1b901125]" started-at="2021-11-04T15:11:37 CDT" name="testPromiseHeaderColumns" finished-at="2021-11-04T15:11:37 CDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPromiseHeaderColumns -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.DeliveringOnOurPromiseIntegrationTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.test.integration.GetPromiseHistoryByOrderIdIntegrationTests">
+        <test-method signature="singleItemOrder()[pri:0, instance:com.amazon.ata.deliveringonourpromise.test.integration.GetPromiseHistoryByOrderIdIntegrationTests@4a2bf345]" started-at="2021-11-04T15:11:37 CDT" name="singleItemOrder" finished-at="2021-11-04T15:11:37 CDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- singleItemOrder -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.test.integration.GetPromiseHistoryByOrderIdIntegrationTests -->
+    </test> <!-- IntegrationRegressionTests -->
+  </suite> <!-- ServiceIntegrationTestsSuite -->
+</testng-results>

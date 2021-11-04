@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:04" hostname="DESKTOP-5B2P3R4" time="0.115">
+  <properties/>
+  <testcase name="getDeliveryPromise_hasPromiseLatestShipDate()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.077"/>
+  <testcase name="getDeliveryPromise_hasCorrectCustomerOrderId()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.005"/>
+  <testcase name="getDeliveryPromise_hasPromiseProvidedBy()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.003"/>
+  <testcase name="getDeliveryPromise_hasPlanQualityTypeCode()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.002"/>
+  <testcase name="getDeliveryPromise_hasPromiseDataSource()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.003"/>
+  <testcase name="getDeliveryPromise_hasCorrectCustomerOrderItemId()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.002"/>
+  <testcase name="getDeliveryPromise_hasPromiseEffectiveDate()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.003"/>
+  <testcase name="getDeliveryPromise_hasFulfillmentSvcSubclassId()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.001"/>
+  <testcase name="getDeliveryPromise_returnsNullOnNonexistentOrderItemId()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.002"/>
+  <testcase name="getDeliveryPromise_hasAsin()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.002"/>
+  <testcase name="getDeliveryPromise_haspromiseLatestArrivalDate()" classname="com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PromiseDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DeliveringOnOurPromise</a> &gt; <a href="index.source.html" class="el_package">com.amazon.ata.deliveringonourpromise.dao</a> &gt; <span class="el_source">PromiseDao.java</span></div><h1>PromiseDao.java</h1><pre class="source lang-java linenums">package com.amazon.ata.deliveringonourpromise.dao;
+
+import com.amazon.ata.deliveringonourpromise.IServiceClient;
+import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryPromiseServiceClient;
+import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
+import com.amazon.ata.deliveringonourpromise.types.Promise;
+import com.amazon.ata.ordermanipulationauthority.OrderResult;
+import com.amazon.ata.ordermanipulationauthority.OrderResultItem;
+import com.amazon.ata.ordermanipulationauthority.OrderShipment;
+
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * DAO implementation for Promises.
+ */
+public class PromiseDao implements ReadOnlyDao&lt;String, List&lt;Promise&gt;&gt; {
+    private final OrderManipulationAuthorityClient omaClient;
+<span class="fc" id="L20">    private List&lt;IServiceClient&gt; serviceClients = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * PromiseDao constructor, accepting service clients for DPS and OMA.
+     *
+     * @param dpsClient DeliveryPromiseServiceClient for DAO to access DPS
+     * @param omaClient OrderManipulationAuthorityClient for DAO to access OMA
+     */
+<span class="fc" id="L28">    public PromiseDao(DeliveryPromiseServiceClient dpsClient, OrderManipulationAuthorityClient omaClient) {</span>
+<span class="fc" id="L29">        this.serviceClients.add(dpsClient);</span>
+<span class="fc" id="L30">        this.omaClient = omaClient;</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Instantiates a new Promise dao.
+     *
+     * @param serviceClients the service clients
+     * @param omaClient      the oma client
+     */
+<span class="fc" id="L39">    public PromiseDao(List&lt;IServiceClient&gt; serviceClients, OrderManipulationAuthorityClient omaClient) {</span>
+<span class="fc" id="L40">        this.omaClient = omaClient;</span>
+<span class="fc" id="L41">        this.serviceClients = serviceClients;</span>
+<span class="fc" id="L42">    }</span>
+
+    /**
+     * Returns a list of all Promises associated with the given order item ID.
+     *
+     * @param customerOrderItemId the order item ID to fetch promise for
+     * @return a List of promises for the given order item ID
+     */
+    @Override
+    public List&lt;Promise&gt; get(String customerOrderItemId) {
+        // Fetch the delivery date, so we can add to any promises that we find
+<span class="fc" id="L53">        ZonedDateTime itemDeliveryDate = getDeliveryDateForOrderItem(customerOrderItemId);</span>
+
+<span class="fc" id="L55">        List&lt;Promise&gt; promises = new ArrayList&lt;&gt;();</span>
+
+        // fetch Promise from Delivery Promise Service. If exists, add to list of Promises to return.
+        // Set delivery date
+
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        for (IServiceClient client : serviceClients) {</span>
+<span class="fc" id="L61">            Promise dpsPromise = client.getPromiseByOrderItemId(customerOrderItemId);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            if (dpsPromise != null) {</span>
+<span class="fc" id="L63">                dpsPromise.setDeliveryDate(itemDeliveryDate);</span>
+<span class="fc" id="L64">                promises.add(dpsPromise);</span>
+            }
+<span class="fc" id="L66">        }</span>
+
+<span class="fc" id="L68">        return promises;</span>
+    }
+
+    /*
+     * Fetches the delivery date of the shipment containing the order item specified by the given order item ID,
+     * if there is one.
+     *
+     * If the order item ID doesn't correspond to a valid order item, or if the shipment hasn't been delivered
+     * yet, return null.
+     */
+    private ZonedDateTime getDeliveryDateForOrderItem(String customerOrderItemId) {
+<span class="fc" id="L79">        OrderResultItem orderResultItem = omaClient.getCustomerOrderItemByOrderItemId(customerOrderItemId);</span>
+
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        if (null != orderResultItem) {</span>
+<span class="fc" id="L82">            OrderResult orderResult = omaClient.getCustomerOrderByOrderId(orderResultItem.getOrderId());</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">            for (OrderShipment shipment : orderResult.getOrderShipmentList()) {</span>
+<span class="fc" id="L84">                return shipment.getDeliveryDate();</span>
+            }
+        }
+
+
+        // didn't find a delivery date!
+<span class="fc" id="L90">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

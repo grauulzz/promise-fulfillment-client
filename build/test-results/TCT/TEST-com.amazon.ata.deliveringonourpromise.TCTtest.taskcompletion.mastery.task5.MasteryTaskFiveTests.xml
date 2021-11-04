@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:12:28" hostname="DESKTOP-5B2P3R4" time="0.257">
+  <properties/>
+  <testcase name="masteryTaskFiveMilestone2_getPromiseHistoryByOrderId_returnsPromisesSortedByAsin" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.116"/>
+  <testcase name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withEqualPromise_returnsZero" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.063"/>
+  <testcase name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithEarlierAsin_returnsNegative" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.019"/>
+  <testcase name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithLaterAsin_returnsPositive" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.021"/>
+  <testcase name="masteryTaskFiveMilestone2_promiseAsinComparator_existsAndImplementsComparator" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.012"/>
+  <testcase name="masteryTaskFiveMilestone2_promise_isNotComparable" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.001"/>
+  <testcase name="masteryTaskFive_getPromiseHistoryByOrderId_returnsFourPromisesForTwoItemsWithTwoPromisesPerItem" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.003"/>
+  <testcase name="masteryTaskFive_getPromiseHistoryByOrderId_returnsOnePromiseForOneItemWithOnePromisePerItem" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.002"/>
+  <testcase name="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForOneItemWithTwoPromisesPerItem" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.002"/>
+  <testcase name="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForTwoItemsWithOnePromisePerItem" classname="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

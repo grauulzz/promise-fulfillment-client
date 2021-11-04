@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="45" passed="45" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-04T15:12:27 CDT" name="ServiceTCTTestsSuite" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1880">
+    <groups>
+    </groups>
+    <test started-at="2021-11-04T15:12:27 CDT" name="TaskCompletionTests" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1880">
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task2.MasteryTaskTwoTests">
+        <test-method signature="masteryTaskTwo_masteryTaskTwoFile_existsAndIncludesMultipleTests()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task2.MasteryTaskTwoTests@6326d5e6]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskTwo_masteryTaskTwoFile_existsAndIncludesMultipleTests" finished-at="2021-11-04T15:12:27 CDT" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskTwo_masteryTaskTwoFile_existsAndIncludesMultipleTests -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task2.MasteryTaskTwoTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task3.PreparednessTaskThreeTests">
+        <test-method signature="preparednessTaskThree_preparednessTaskThreeFile_existsAndItIsNotEmpty()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task3.PreparednessTaskThreeTests@5e395dca]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskThree_preparednessTaskThreeFile_existsAndItIsNotEmpty" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskThree_preparednessTaskThreeFile_existsAndItIsNotEmpty -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task3.PreparednessTaskThreeTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests">
+        <test-method signature="prepaornnessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredInterfaces(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="prepaornnessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredInterfaces" data-provider="requiredInterfaces" finished-at="2021-11-04T15:12:29 CDT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ReadOnlyDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepaornnessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredInterfaces -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GetPromiseHistoryByOrderIdActivity]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseHistoryClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderManipulationAuthorityClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DeliveryPromiseServiceClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[App]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Order]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderItem]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Promise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses(java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses" data-provider="requiredClasses" finished-at="2021-11-04T15:12:29 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseHistory]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredClasses -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="38" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseHistoryClient]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[GetPromiseHistoryByOrderIdActivity]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GetPromiseHistoryByOrderIdActivity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PromiseDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GetPromiseHistoryByOrderIdActivity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OrderDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseDao]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DeliveryPromiseServiceClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseDao]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OrderManipulationAuthorityClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderDao]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OrderManipulationAuthorityClient]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseHistory]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Order]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseHistory]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Promise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships" data-provider="requiredContainsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Order]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OrderItem]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredContainsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships" data-provider="requiredImplementsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderDao]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ReadOnlyDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships -->
+        <test-method signature="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests@791552aa]" started-at="2021-11-04T15:12:29 CDT" name="preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships" data-provider="requiredImplementsRelationships" finished-at="2021-11-04T15:12:29 CDT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PromiseDao]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ReadOnlyDao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preparednessTaskFour_deliveringOnOurPromiseClassDiagram_containsRequiredImplementsRelationships -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.preparedness.task4.PreparednessTaskFourTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:28 CDT" name="setup" finished-at="2021-11-04T15:12:28 CDT" duration-ms="784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFiveMilestone2_getPromiseHistoryByOrderId_returnsPromisesSortedByAsin()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:28 CDT" name="masteryTaskFiveMilestone2_getPromiseHistoryByOrderId_returnsPromisesSortedByAsin" finished-at="2021-11-04T15:12:28 CDT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_getPromiseHistoryByOrderId_returnsPromisesSortedByAsin -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:28 CDT" name="setup" finished-at="2021-11-04T15:12:28 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withEqualPromise_returnsZero()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:28 CDT" name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withEqualPromise_returnsZero" finished-at="2021-11-04T15:12:29 CDT" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withEqualPromise_returnsZero -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithEarlierAsin_returnsNegative()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithEarlierAsin_returnsNegative" finished-at="2021-11-04T15:12:29 CDT" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithEarlierAsin_returnsNegative -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithLaterAsin_returnsPositive()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithLaterAsin_returnsPositive" finished-at="2021-11-04T15:12:29 CDT" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_promiseAsinComparatorCompare_withPromiseWithLaterAsin_returnsPositive -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFiveMilestone2_promiseAsinComparator_existsAndImplementsComparator()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFiveMilestone2_promiseAsinComparator_existsAndImplementsComparator" finished-at="2021-11-04T15:12:29 CDT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_promiseAsinComparator_existsAndImplementsComparator -->
+        <test-method signature="masteryTaskFiveMilestone2_promise_isNotComparable()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFiveMilestone2_promise_isNotComparable" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFiveMilestone2_promise_isNotComparable -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFive_getPromiseHistoryByOrderId_returnsFourPromisesForTwoItemsWithTwoPromisesPerItem()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFive_getPromiseHistoryByOrderId_returnsFourPromisesForTwoItemsWithTwoPromisesPerItem" finished-at="2021-11-04T15:12:29 CDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFive_getPromiseHistoryByOrderId_returnsFourPromisesForTwoItemsWithTwoPromisesPerItem -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFive_getPromiseHistoryByOrderId_returnsOnePromiseForOneItemWithOnePromisePerItem()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFive_getPromiseHistoryByOrderId_returnsOnePromiseForOneItemWithOnePromisePerItem" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFive_getPromiseHistoryByOrderId_returnsOnePromiseForOneItemWithOnePromisePerItem -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForOneItemWithTwoPromisesPerItem()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForOneItemWithTwoPromisesPerItem" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForOneItemWithTwoPromisesPerItem -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="setup" finished-at="2021-11-04T15:12:29 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForTwoItemsWithOnePromisePerItem()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests@6050336f]" started-at="2021-11-04T15:12:29 CDT" name="masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForTwoItemsWithOnePromisePerItem" finished-at="2021-11-04T15:12:29 CDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFive_getPromiseHistoryByOrderId_returnsTwoPromisesForTwoItemsWithOnePromisePerItem -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task5.MasteryTaskFiveTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests">
+        <test-method signature="masteryTaskThree_orderClass_getCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests@7c3b0cbb]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskThree_orderClass_getCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying" finished-at="2021-11-04T15:12:27 CDT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskThree_orderClass_getCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying -->
+        <test-method signature="masteryTaskThree_orderClass_internalStateIsNotExposed()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests@7c3b0cbb]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskThree_orderClass_internalStateIsNotExposed" finished-at="2021-11-04T15:12:27 CDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskThree_orderClass_internalStateIsNotExposed -->
+        <test-method signature="masteryTaskThree_orderClass_internalStateIsUnmodifiable()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests@7c3b0cbb]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskThree_orderClass_internalStateIsUnmodifiable" finished-at="2021-11-04T15:12:27 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskThree_orderClass_internalStateIsUnmodifiable -->
+        <test-method signature="masteryTaskThree_orderClass_withCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests@7c3b0cbb]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskThree_orderClass_withCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying" finished-at="2021-11-04T15:12:27 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskThree_orderClass_withCustomerOrderItemList_internalStateIsProtectedByDefensiveCopying -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task3.MasteryTaskThreeTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:27 CDT" name="setup" finished-at="2021-11-04T15:12:27 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFour_masteryTaskFourFile_existsAndItIsNotEmpty()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskFour_masteryTaskFourFile_existsAndItIsNotEmpty" finished-at="2021-11-04T15:12:27 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFour_masteryTaskFourFile_existsAndItIsNotEmpty -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:27 CDT" name="setup" finished-at="2021-11-04T15:12:27 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFour_ofsClientClass_existsAndHasASingleMethod()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskFour_ofsClientClass_existsAndHasASingleMethod" finished-at="2021-11-04T15:12:28 CDT" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFour_ofsClientClass_existsAndHasASingleMethod -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="setup" finished-at="2021-11-04T15:12:28 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFour_orderFulfillmentServiceClient_getsPromise()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="masteryTaskFour_orderFulfillmentServiceClient_getsPromise" finished-at="2021-11-04T15:12:28 CDT" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFour_orderFulfillmentServiceClient_getsPromise -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="setup" finished-at="2021-11-04T15:12:28 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFour_promiseClients_arePolymorphicallyInterchangeable()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="masteryTaskFour_promiseClients_arePolymorphicallyInterchangeable" finished-at="2021-11-04T15:12:28 CDT" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFour_promiseClients_arePolymorphicallyInterchangeable -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="setup" finished-at="2021-11-04T15:12:28 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskFour_promiseDao_supportsMultiplePromiseClients()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests@442aa185]" started-at="2021-11-04T15:12:28 CDT" name="masteryTaskFour_promiseDao_supportsMultiplePromiseClients" finished-at="2021-11-04T15:12:28 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskFour_promiseDao_supportsMultiplePromiseClients -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task4.MasteryTaskFourTests -->
+      <class name="com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task1.MasteryTaskOneTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task1.MasteryTaskOneTests@75b4d4b4]" started-at="2021-11-04T15:12:27 CDT" name="setup" finished-at="2021-11-04T15:12:27 CDT" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="masteryTaskOne_missedPromiseCli_resolvesCSIssue()[pri:0, instance:com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task1.MasteryTaskOneTests@75b4d4b4]" started-at="2021-11-04T15:12:27 CDT" name="masteryTaskOne_missedPromiseCli_resolvesCSIssue" finished-at="2021-11-04T15:12:27 CDT" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- masteryTaskOne_missedPromiseCli_resolvesCSIssue -->
+      </class> <!-- com.amazon.ata.deliveringonourpromise.TCTtest.taskcompletion.mastery.task1.MasteryTaskOneTests -->
+    </test> <!-- TaskCompletionTests -->
+  </suite> <!-- ServiceTCTTestsSuite -->
+</testng-results>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:01" hostname="DESKTOP-5B2P3R4" time="0.395">
+  <properties/>
+  <testcase name="getOrderData_shipmentShipDateIsNullOrAfterOrderCreationDate()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.066"/>
+  <testcase name="getOrderFixturesTable_returnsTextTable_withExpectedColumns()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.068"/>
+  <testcase name="getOrderData_orderIsEitherNotClosedOrAllShipmentsHaveDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.007"/>
+  <testcase name="getOrderData_shipmentCreationDateNotBeforeOrderDate()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.007"/>
+  <testcase name="getOrderFixtures_containsExpectedSingleItemOrders()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.004"/>
+  <testcase name="getOrderFixtures_containsExpectedTripleItemOrders()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.002"/>
+  <testcase name="getOrderItemData_agreesWithGetOrderData()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.047"/>
+  <testcase name="getOrderData_hasAtLeastOneOrderItem()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.004"/>
+  <testcase name="getOrderData_shipmentDeliveryDateIsNullOrAfterShipmentShipDate()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.006"/>
+  <testcase name="getOrderData_allAsinsAndTitlesExist()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.005"/>
+  <testcase name="getOrderData_fixtureOrders_matchGetOrderFixturesMap()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.069"/>
+  <testcase name="getOrderData_invalidDigitFormatIdReturnsNull()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.003"/>
+  <testcase name="getOrderData_orderIdsMatch()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.002"/>
+  <testcase name="getOrderFixtures_containsExpectedDoubleItemOrders()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.002"/>
+  <testcase name="getOrderData_shipmentItemsQuantitiesLessThanOrEqualToOrderItems()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.018"/>
+  <testcase name="getOrderData_severalConsecutiveOrdersHaveDifferentOrderItems()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.003"/>
+  <testcase name="getOrderData_allOrderItemsAccountedForInShipmentItems()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.023"/>
+  <testcase name="getOrderData_nonNumericOrderIdReturnsNull()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.003"/>
+  <testcase name="getOrderFixturesTable_returnsTextTable_withExpectedOrders()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.021"/>
+  <testcase name="getOrderData_nonexistentOrderFixture_returnsNull()" classname="com.amazon.ata.deliveringonourpromise.data.OrderDatastoreTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
