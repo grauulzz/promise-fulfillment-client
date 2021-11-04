@@ -18,13 +18,5 @@ public class PromiseAsinComparator implements Comparator<Promise>, Serializable 
         return comp.compare(o1, o2);
     }
 
-    /**
-     * Is num boolean.
-     *
-     * @param str the str
-     * @return the boolean
-     */
-    public boolean isNum(String str) {
-        return str != null && str.matches("[0-9]+");
-    }
+
 }

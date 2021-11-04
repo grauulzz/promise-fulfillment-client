@@ -16,15 +16,16 @@ class PromiseAsinComparatorTest {
 
         Promise p1 = Promise.builder().withAsin("123").build();
         Promise p2 = Promise.builder().withAsin("123").build();
-        promiseAsinComparator.compare(p1, p2);
 
-        boolean isNum = promiseAsinComparator.isNum(p1.getAsin()) && p1.getAsin().matches("[0-9]+");
+        int comp = promiseAsinComparator.compare(p1, p2);
+        boolean isNumCheck = isNum(Integer.toString(comp));
 
-        assertTrue(isNum);
-
-
+        assertTrue(isNumCheck);
     }
 
+    public boolean isNum(String str) {
+        return str != null && str.matches("[0-9]+");
+    }
 }
 
 

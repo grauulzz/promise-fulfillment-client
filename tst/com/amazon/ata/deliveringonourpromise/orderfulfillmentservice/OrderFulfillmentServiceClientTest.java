@@ -37,7 +37,7 @@ public class OrderFulfillmentServiceClientTest {
         orderItemId = null;
 
         // WHEN
-        Promise promise = client.getPromiseByOrderItemId(orderItemId);
+        Promise promise = client.getPromiseByOrderItemId(null);
 
         // THEN
         assertNull(promise);
