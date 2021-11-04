@@ -139,11 +139,7 @@ public class Shell {
             }
             row.add(promise.getPromiseProvidedBy());
             Integer confidence = promise.getConfidence();
-            if (confidence != null) {
-                row.add(confidence.toString());
-            } else {
-                row.add(null);
-            }
+            row.add(confidence.toString());
         }
 
         return new TextTable(columnNames, promiseRows).toString();
