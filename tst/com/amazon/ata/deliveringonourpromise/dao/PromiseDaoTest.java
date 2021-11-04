@@ -5,31 +5,29 @@ import com.amazon.ata.deliveringonourpromise.deliverypromiseservice.DeliveryProm
 import com.amazon.ata.deliveringonourpromise.ordermanipulationauthority.OrderManipulationAuthorityClient;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
 import com.amazon.ata.order.OrderFieldValidator;
-import com.google.common.base.Preconditions;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PromiseDaoTest {
 
     private PromiseDao dao;
 
-    private OrderManipulationAuthorityClient omaClient = App.getOrderManipulationAuthorityClient();
-    private DeliveryPromiseServiceClient dpsClient = App.getDeliveryPromiseServiceClient();
+    private final OrderManipulationAuthorityClient omaClient = App.getOrderManipulationAuthorityClient();
+    private final DeliveryPromiseServiceClient dpsClient = App.getDeliveryPromiseServiceClient();
 
-    // undelivered
-    private String shippedOrderId;
     private String shippedOrderItemId;
     private Promise shippedDeliveryPromise;
 
-    // delivered
-    private String deliveredOrderId;
+
     private String deliveredOrderItemId;
+
     private Promise deliveredDeliveryPromise;
     private ZonedDateTime deliveredDeliveryDate;
 
@@ -38,8 +36,10 @@ public class PromiseDaoTest {
     @BeforeEach
     private void setup() {
         // order fixtures: these are specific known test orders.
-        shippedOrderId = "900-3746401-0000002";
-        deliveredOrderId = "900-3746401-0000003";
+        // undelivered
+        String shippedOrderId = "900-3746401-0000002";
+        // delivered
+        String deliveredOrderId = "900-3746401-0000003";
 
         // We're doing this (not isolating the DAO from dependencies) because we haven't covered mocking yet
         // Note that this logic depends on the above orders being single-item orders
