@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:15:55" hostname="DESKTOP-5B2P3R4" time="0.025">
+<testsuite name="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-08T04:09:13" hostname="DESKTOP-5B2P3R4" time="0.037">
   <properties/>
-  <testcase name="givenNullString_whenCheckNotNullWithMessage_throwsException()" classname="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" time="0.005"/>
-  <testcase name="get_existentOrderItemId_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" time="0.011"/>
-  <testcase name="get_nonexistentOrderItemId_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" time="0.004"/>
+  <testcase name="checkAddOrderToOrderItemList_returnsTrue()" classname="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" time="0.029"/>
+  <testcase name="get_nonexistentOrder_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.dao.OrderDaoTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

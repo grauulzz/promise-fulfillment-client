@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:15:55" hostname="DESKTOP-5B2P3R4" time="0.059">
+<testsuite name="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-11-08T04:09:13" hostname="DESKTOP-5B2P3R4" time="0.054">
   <properties/>
-  <testcase name="get_validOrderItemId_returnsCorrectPromiseLatestArrivalDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.004"/>
-  <testcase name="givenNullString_whenCheckNotNullWithMessage_throwsException()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.005"/>
-  <testcase name="get_validOrderItemId_returnsCorrectPromiseProvidedBy()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.004"/>
-  <testcase name="get_deliveredShipment_returnsDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.005"/>
-  <testcase name="get_validOrderItemId_returnsCorrectAsin()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.003"/>
-  <testcase name="get_undeliveredShipment_returnsNullDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.004"/>
-  <testcase name="get_validOrderItemId_returnsCorrectIsActive()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.003"/>
-  <testcase name="get_validOrderItemId_returnsCorrectCustomerOrderItemId()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
-  <testcase name="get_validOrderItemId_returnsCorrectPromiseEffectiveDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.004"/>
+  <testcase name="get_validOrderItemId_returnsCorrectPromiseLatestArrivalDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
+  <testcase name="givenNullString_whenCheckNotNullWithMessage_throwsException()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.022"/>
+  <testcase name="get_validOrderItemId_returnsCorrectPromiseProvidedBy()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
+  <testcase name="get_deliveredShipment_returnsDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
+  <testcase name="get_validOrderItemId_returnsCorrectAsin()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.005"/>
+  <testcase name="get_undeliveredShipment_returnsNullDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
+  <testcase name="get_validOrderItemId_returnsCorrectIsActive()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.001"/>
+  <testcase name="get_validOrderItemId_returnsCorrectCustomerOrderItemId()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.001"/>
+  <testcase name="get_validOrderItemId_returnsCorrectPromiseEffectiveDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
   <testcase name="get_validOrderItemId_returnsCorrectLatestShipDate()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.002"/>
-  <testcase name="get_nonexistentOrderItemId_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.004"/>
+  <testcase name="get_nonexistentOrderItemId_returnsEmptyList()" classname="com.amazon.ata.deliveringonourpromise.dao.PromiseDaoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

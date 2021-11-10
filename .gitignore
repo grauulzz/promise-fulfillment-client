@@ -1,7 +1,7 @@
 # Jetbrains IntelliJ Idea
 .idea
 *.iml
-.settings
+
 
 # Linux
 # backup files
@@ -23,7 +23,7 @@ Thumbs.db
 # Java
 *.class
 build
-gradle
+.gradle
 
 
 # packages 

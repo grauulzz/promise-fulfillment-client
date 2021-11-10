@@ -12,7 +12,7 @@ class PromiseAsinComparatorTest {
     PromiseAsinComparator promiseAsinComparator = new PromiseAsinComparator();
 
     @Test
-    void compareTwoPromises_returnsTrue() {
+    void compareTwoPromisesByAsin_returnsTrue() {
 
         Promise p1 = Promise.builder().withAsin("123").build();
         Promise p2 = Promise.builder().withAsin("123").build();

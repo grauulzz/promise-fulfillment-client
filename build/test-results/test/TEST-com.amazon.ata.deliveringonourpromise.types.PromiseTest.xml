@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.deliveringonourpromise.types.PromiseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:15:58" hostname="DESKTOP-5B2P3R4" time="0.001">
+<testsuite name="com.amazon.ata.deliveringonourpromise.types.PromiseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-08T04:09:19" hostname="DESKTOP-5B2P3R4" time="0.0">
   <properties/>
-  <testcase name="setDeliveryDate_whenSet_returnsDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.types.PromiseTest" time="0.001"/>
+  <testcase name="setDeliveryDate_whenSet_returnsDeliveryDate()" classname="com.amazon.ata.deliveringonourpromise.types.PromiseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
