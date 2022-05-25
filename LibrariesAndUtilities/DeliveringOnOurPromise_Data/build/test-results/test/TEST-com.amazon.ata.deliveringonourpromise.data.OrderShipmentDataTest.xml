@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.deliveringonourpromise.data.OrderShipmentDataTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:02" hostname="DESKTOP-5B2P3R4" time="0.007">
-  <properties/>
-  <testcase name="includesOrderItem_returnsFalseWhenItemNotIncluded()" classname="com.amazon.ata.deliveringonourpromise.data.OrderShipmentDataTest" time="0.004"/>
-  <testcase name="includesOrderItem_returnsTrueWhenItemIncluded()" classname="com.amazon.ata.deliveringonourpromise.data.OrderShipmentDataTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

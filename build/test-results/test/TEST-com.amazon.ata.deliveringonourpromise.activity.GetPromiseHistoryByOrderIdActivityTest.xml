@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.deliveringonourpromise.activity.GetPromiseHistoryByOrderIdActivityTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-08T04:09:12" hostname="DESKTOP-5B2P3R4" time="0.874">
-  <properties/>
-  <testcase name="getPromiseHistoryByOrderId_orderWithDpsPromise_returnsDpsPromise()" classname="com.amazon.ata.deliveringonourpromise.activity.GetPromiseHistoryByOrderIdActivityTest" time="0.849"/>
-  <testcase name="getPromiseHistoryByOrderId_nullOrderId_isRejected()" classname="com.amazon.ata.deliveringonourpromise.activity.GetPromiseHistoryByOrderIdActivityTest" time="0.024"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

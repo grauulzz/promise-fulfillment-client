@@ -1,2 +1,0 @@
-com/amazon/ata/order/OrderFieldValidatorTest.java
- com.amazon.ata.order.OrderFieldValidatorTest

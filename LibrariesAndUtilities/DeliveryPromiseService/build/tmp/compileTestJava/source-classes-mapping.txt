@@ -1,2 +1,0 @@
-com/amazon/ata/deliverypromiseservice/service/DeliveryPromiseServiceTest.java
- com.amazon.ata.deliverypromiseservice.service.DeliveryPromiseServiceTest

@@ -1,6 +1,0 @@
-com/amazon/ata/ordermanipulationauthority/OrderShipmentTest.java
- com.amazon.ata.ordermanipulationauthority.OrderShipmentTest
-com/amazon/ata/ordermanipulationauthority/OrderConditionTest.java
- com.amazon.ata.ordermanipulationauthority.OrderConditionTest
-com/amazon/ata/ordermanipulationauthority/OrderManipulationAuthorityTest.java
- com.amazon.ata.ordermanipulationauthority.OrderManipulationAuthorityTest

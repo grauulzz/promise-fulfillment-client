@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amazon.ata.orderfulfillmentservice.OrderPromiseTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-04T20:16:09" hostname="DESKTOP-5B2P3R4" time="0.12">
-  <properties/>
-  <testcase name="toString_containsExpectedFields()" classname="com.amazon.ata.orderfulfillmentservice.OrderPromiseTest" time="0.114"/>
-  <testcase name="toString_containsExpectedValues()" classname="com.amazon.ata.orderfulfillmentservice.OrderPromiseTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
