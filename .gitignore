@@ -22,11 +22,9 @@ Thumbs.db
 
 # Java
 *.class
-build
-.gradle
 
 
-# packages 
+# packages
 *.war
 *.ear
 
@@ -35,3 +33,9 @@ build
 
 # jME (binaries)
 *.so
+
+build/
+
+.gradle/
+
+LibrariesAndUtilities/
